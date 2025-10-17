@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 function NavbarPrincipal() {
     const [buscarTermino, setearTermino] = useState('');
 
-    const handleSearch = (e) => {
+    const busqueda = (e) => {
         e.preventDefault();
         console.log('Buscando:', buscarTermino);
     };
@@ -30,7 +30,7 @@ function NavbarPrincipal() {
                             <button type="button" className="btn botones ms-3">Productos</button>
                         </Link>
                         
-                        <form className="d-flex" role="search" onSubmit={handleSearch}>
+                        <form className="d-flex" role="search" onSubmit={busqueda}>
                             <input 
                                 className="form-control me-2" 
                                 type="search" 
