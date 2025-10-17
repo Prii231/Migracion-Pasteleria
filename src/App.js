@@ -2,9 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import NavbarPrincipal from './Components/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-
-
+import Home from './Components/Home'; 
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -20,8 +19,11 @@ function App() {
           <Route path="/registro" element={<div><h1>Registro</h1></div>} />
           <Route path="/perfil" element={<div><h1>Perfil</h1></div>} />
         </Routes>
+        <Footer />
       </div>
+      
     </BrowserRouter>
+    
   );
 }
 
