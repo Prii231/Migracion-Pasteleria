@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import logo from '../assets/images/LogoTitle.png';
+
 
 function NavbarPrincipal() {
     const [buscarTermino, setearTermino] = useState('');
@@ -16,7 +18,7 @@ function NavbarPrincipal() {
                 <nav className="navbar">
                     <div className="container">
                         <Link className="navbar-brand d-flex align-items-center" to="/">
-                            <img src="/assets/images/LogoTitle.png" alt="Bootstrap" width="60" height="60"/>
+                            <img src={logo} alt="Bootstrap" width="60" height="60"/>
                             <span className="textoCuerpo ms-3">
                                 <h3><strong>Pastelería<br />Mil Sabores</strong></h3>
                             </span>
