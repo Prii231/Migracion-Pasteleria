@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+
 
 function Home() {
     return (
@@ -60,7 +63,7 @@ function Home() {
                                 <p>¡50% OFF por registrarte! Código válido solo para nuevos usuarios.
                                     Aplica automáticamente al crear tu cuenta.
                                 </p>
-                                <center><a href="#" className="btn botones">Canjear</a></center>
+                                <center><Link to="#" className="btn botones">Canjear</Link></center>
                             </div>
                         </div>
                     </div>
@@ -75,7 +78,7 @@ function Home() {
                                 <p className="card-text">10% OFF al registrarte. Código exclusivo para nuevos usuarios.
                                     Descuento automático en tu primera compra.
                                 </p>
-                                <center><a href="#" className="btn botones">Canjear</a></center>
+                                <center><Link to="#" className="btn botones">Canjear</Link></center>
                             </div>
                         </div>
                     </div>
@@ -90,7 +93,7 @@ function Home() {
                                 <p className="card-text">¡Torta GRATIS para estudiantes DuocUC!
                                     Registrate con tu correo institucional y disfruta tu postre sin costo.
                                 </p>
-                                <center><a href="#" className="btn botones mt-auto">Canjear</a></center>
+                                <center><Link to="#" className="btn botones mt-auto">Canjear</Link></center>
                             </div>
                         </div>
                     </div>
