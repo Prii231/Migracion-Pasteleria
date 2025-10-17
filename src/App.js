@@ -7,11 +7,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="">
-      <div className='col-lg-12'>
-        <NavbarPrincipal/>
+    <BrowserRouter>
+      <div className="">
+        <div className='col-lg-12'>
+          <NavbarPrincipal />
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
