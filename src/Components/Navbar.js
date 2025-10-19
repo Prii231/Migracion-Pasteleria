@@ -1,8 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import './Navbar.css';
 import logo from '../assets/images/LogoTitle.png';
-
 
 function NavbarPrincipal() {
     const [buscarTermino, setearTermino] = useState('');
@@ -13,51 +18,57 @@ function NavbarPrincipal() {
     };
 
     return (
-        <div className="container">
+        <Container>
             <div className="col-lg-12">
-                <nav className="navbar">
-                    <div className="container">
-                        <Link className="navbar-brand d-flex align-items-center" to="/">
+                <Navbar expand="lg" className="navbar">
+                    <Container>
+                        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
                             <img src={logo} alt="Bootstrap" width="60" height="60"/>
                             <span className="textoCuerpo ms-3">
                                 <h3><strong>Pastelería<br />Mil Sabores</strong></h3>
                             </span>
-                        </Link>
-                        
-                        <Link to="/">
-                            <button type="button" className="btn botones ms-3">Inicio</button>
-                        </Link>
-                        
-                        <Link to="/catalogo">
-                            <button type="button" className="btn botones ms-3">Productos</button>
-                        </Link>
-                        
-                        <form className="d-flex" role="search" onSubmit={busqueda}>
-                            <input 
-                                className="form-control me-2" 
-                                type="search" 
-                                placeholder="Buscar producto..."
-                                aria-label="Search"
-                                value={buscarTermino}
-                                onChange={(e) => setearTermino(e.target.value)}
-                            />
-                            <button className="btn botones" type="submit">Buscar</button>
-                        </form>
+                        </Navbar.Brand>
 
-                        <div className="dropdown-hover icono-espaciado">
-                            <i className="fa-solid fa-user iconos"></i>
-                            <div className="dropdown-content">
-                                <Link to="/login">Iniciar Sesión</Link>
-                                <Link to="/registro">Registrarse</Link>
-                                <Link to="/perfil">Actualizar Información</Link>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        
+                        <Navbar.Collapse id="basic-navbar-nav">
+                            <Nav className="me-auto">
+                                <Nav.Link as={Link} to="/">
+                                    <Button variant="" className="botones ms-3">Inicio</Button>
+                                </Nav.Link>
+                                
+                                <Nav.Link as={Link} to="/catalogo">
+                                    <Button variant="" className="botones ms-3">Productos</Button>
+                                </Nav.Link>
+                            </Nav>
+
+                            <Form className="d-flex" role="search" onSubmit={busqueda}>
+                                <Form.Control
+                                    type="search"
+                                    placeholder="Buscar producto..."
+                                    className="me-2"
+                                    aria-label="Search"
+                                    value={buscarTermino}
+                                    onChange={(e) => setearTermino(e.target.value)}
+                                />
+                                <Button variant="" className="botones" type="submit">Buscar</Button>
+                            </Form>
+
+                            <div className="dropdown-hover icono-espaciado">
+                                <i className="fa-solid fa-user iconos"></i>
+                                <div className="dropdown-content">
+                                    <Link to="/login">Iniciar Sesión</Link>
+                                    <Link to="/registro">Registrarse</Link>
+                                    <Link to="/perfil">Actualizar Información</Link>
+                                </div>
                             </div>
-                        </div>
 
-                        <i className="fa-solid fa-basket-shopping iconos icono-espaciado"></i>
-                    </div>
-                </nav>
+                            <i className="fa-solid fa-basket-shopping iconos icono-espaciado"></i>
+                        </Navbar.Collapse>
+                    </Container>
+                </Navbar>
             </div>
-        </div>
+        </Container>
     );
 }
 
