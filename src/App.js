@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CatalogoProductos from './Components/Catalogo';
 import Home from './Components/Home'; 
 import Footer from './Components/Footer';
-
+import Carrusel from './Components/Carrusel';
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
           <Route path="/registro" element={<div><h1>Registro</h1></div>} />
           <Route path="/perfil" element={<div><h1>Perfil</h1></div>} />
         </Routes>
+        <Carrusel/>
         <Footer />
       </div>
       
