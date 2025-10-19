@@ -9,7 +9,7 @@ import Carrusel from './Components/Carrusel';
 import Cards from './Components/Card';
 import Login from './Components/InicioSesion';
 import Registro from './Components/Registro';
-
+import Perfil from './Components/ActualizarPerfil';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
           <Route path="/catalogo" element={<CatalogoProductos />} />
           <Route path="/login" element={<Login/>} />
           <Route path="/registro" element={<Registro />} />
-          <Route path="/perfil" element={<div><h1>Perfil</h1></div>} />
+          <Route path="/perfil" element={<Perfil />} />
         </Routes>
         
         <Footer />
