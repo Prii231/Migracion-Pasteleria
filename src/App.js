@@ -23,8 +23,7 @@ function App() {
           <Route path="/registro" element={<div><h1>Registro</h1></div>} />
           <Route path="/perfil" element={<div><h1>Perfil</h1></div>} />
         </Routes>
-        <Carrusel />
-        <Cards />
+        
         <Footer />
       </div>
       
