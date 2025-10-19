@@ -1,25 +1,36 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import ExampleCarouselImage from 'components/ExampleCarouselImage';
 
 function Carrusel() {
     return (
-        <div>
-            <div className='col-lg-12'>
-                <Carousel id='carruselPromociones' className="carousel slide" style={{width: '90%'}}>
-                    <Carousel.Item>
-                        <img src= 'assets/images/consejosDePasteleria.png' text="Consejos" />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img src = 'assets/images/RecetasExclusivas.png' text="Recetas" />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img src='assets/images/NoticiasPasteleria.png' text="Noticias" />
-                    </Carousel.Item>
-                </Carousel>
-            </div>
+        <div className='container my-4'>
+            <Carousel id='carruselPromociones' style={{width: '90%', margin: '0 auto'}}>
+                <Carousel.Item>
+                    <img 
+                        className="d-block w-100"
+                        src="/assets/images/consejosDePasteleria.png" 
+                        alt="Consejos de Pastelería"
+                    />
+                </Carousel.Item>
+
+                <Carousel.Item>
+                    <img 
+                        className="d-block w-100"
+                        src="/assets/images/RecetasExclusivas.png" 
+                        alt="Recetas Exclusivas"
+                    />
+                </Carousel.Item>
+
+                <Carousel.Item>
+                    <img 
+                        className="d-block w-100"
+                        src="/assets/images/NoticiasPasteleria.png" 
+                        alt="Noticias de Pastelería"
+                    />
+                </Carousel.Item>
+            </Carousel>
         </div>
     );
 }
 
-export default UncontrolledExample;
+export default Carrusel;
