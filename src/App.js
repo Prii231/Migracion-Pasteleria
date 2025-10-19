@@ -8,6 +8,8 @@ import Footer from './Components/Footer';
 import Carrusel from './Components/Carrusel';
 import Cards from './Components/Card';
 import Login from './Components/InicioSesion';
+import Registro from './Components/Registro';
+
 
 function App() {
   return (
@@ -20,7 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/catalogo" element={<CatalogoProductos />} />
           <Route path="/login" element={<Login/>} />
-          <Route path="/registro" element={<div><h1>Registro</h1></div>} />
+          <Route path="/registro" element={<Registro />} />
           <Route path="/perfil" element={<div><h1>Perfil</h1></div>} />
         </Routes>
         

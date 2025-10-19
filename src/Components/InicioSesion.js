@@ -30,7 +30,7 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Datos del formulario:', formData);
-        // Aquí iría la lógica de autenticación
+        
     };
 
     return (
