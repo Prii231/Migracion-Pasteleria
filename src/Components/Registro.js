@@ -48,7 +48,7 @@ function Registro() {
                 <Row>
                     <Col xl={12}>
                         <Card className="shadow-lg rounded-5">
-                            <Card.Body className="p-4">
+                            <Card.Body className="p-4" style={{width: '500px'}}>
                                 <h1 
                                     className="text-center mb-4" 
                                     style={{ fontFamily: 'Dancing Script', color: '#8B4513' }}
