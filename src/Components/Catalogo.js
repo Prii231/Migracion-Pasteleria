@@ -21,109 +21,68 @@ function CatalogoProductos() {
                         descripcion = "Clásica y deliciosa, elaborada con suave bizcocho de cacao y un intenso sabor a chocolate."
                         precio = "$45.000"
                     />
+                </Col>
+
+                
+                <Col xl={4} className="d-flex justify-content-center">
                     
+                    <TarjetasCatalogo 
+                        categoria = "torta-cuadrada"
+                        imagen = "/assets/images/TortaFruta.png"
+                        titulo = "Torta de Frutas"
+                        descripcion = "Fresca y colorida, rellena con frutas de temporada y un bizcocho ligero, cobertura de crema."
+                        precio = "$50.000"
+                    />
                 </Col>
 
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }} data-category="torta-cuadrada">
-                        <Card.Img variant="top" src="/assets/images/TortaFruta.png" alt="Torta de Frutas" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Torta de Frutas
-                            </Card.Title>
-                            <Card.Text>
-                                Fresca y colorida, rellena con frutas de temporada y un bizcocho ligero, cobertura de crema.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$50.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-
-                
-                <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }} data-category="torta-circular">
-                        <Card.Img variant="top" src="/assets/images/TortaVainilla.png" alt="Torta de Vainilla" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Torta de Vainilla
-                            </Card.Title>
-                            <Card.Text>
-                                Un clásico de sabor suave, con esponjoso bizcocho de vainilla y cobertura cremosa.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$40.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                    <TarjetasCatalogo 
+                        categoria = "torta-circular"
+                        imagen = "/assets/images/TortaVainilla.png"
+                        titulo = "Torta de Vainilla"
+                        descripcion = "Un clásico de sabor suave, con esponjoso bizcocho de vainilla y cobertura cremosa."
+                        precio = "$40.000"
+                    />
                 </Col>
             </Row>
 
             <Row className="mt-5">
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }} data-category="torta-circular">
-                        <Card.Img variant="top" src="/assets/images/TortaCircularManjar.png" alt="Torta de Manjar" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Torta de Manjar
-                            </Card.Title>
-                            <Card.Text>
-                                Rellena de tradicional manjar chileno, con un toque casero y dulce irresistible.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$42.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                    <TarjetasCatalogo 
+                        categoria = "torta-circular"
+                        imagen = "/assets/images/TortaCircularManjar.png"
+                        titulo = "Torta de Manjar"
+                        descripcion = "Rellena de tradicional manjar chileno, con un toque casero y dulce irresistible."
+                        precio = "$42.000"
+                    />
                 </Col>
 
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }}>
-                        <Card.Img variant="top" src="/assets/images/PostreMousseChocolate.png" alt="Mousse de Chocolate" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Mousse de Chocolate
-                            </Card.Title>
-                            <Card.Text>
-                                Textura ligera y cremosa, con un sabor intenso para los amantes del chocolate.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$5.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                    <TarjetasCatalogo 
+                        categoria = "postre"
+                        imagen = "/assets/images/PostreMousseChocolate.png"
+                        titulo = "Mousse de Chocolate"
+                        descripcion = "Textura ligera y cremosa, con un sabor intenso para los amantes del chocolate."
+                        precio = "$5.000"
+                    />
                 </Col>
 
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }}>
-                        <Card.Img variant="top" src="/assets/images/PostreTiramisu.png" alt="Tiramisú Clásico" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Tiramisú Clásico
-                            </Card.Title>
-                            <Card.Text>
-                                Postre italiano con capas de bizcocho, café y suave crema de mascarpone.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$5.500</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                    <TarjetasCatalogo 
+                        categoria = "postre"
+                        imagen = "/assets/images/PostreTiramisu.png"
+                        titulo = "Tiramisú Clásico"
+                        descripcion = "Postre italiano con capas de bizcocho, café y suave crema de mascarpone."
+                        precio = "$5.500"
+                    />
                 </Col>
             </Row>
 
             <Row className="mt-5">
-                
                 <Col xl={4} className="d-flex justify-content-center">
                 <TarjetasCatalogo 
                         categoria = "torta-circular"
