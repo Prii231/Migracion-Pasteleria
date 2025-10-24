@@ -6,13 +6,14 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import TarjetasCatalogo from './TarjetasCatalogo';
-import filtro from './filtro';
+import FiltroProductos from './filtro';
 
 function CatalogoProductos() {
     return (
-        
         <Container>
-            <filtro />
+            <hr style={{color:'#8B4513', height: '10%', borderWidth:'2px'}} />
+            <FiltroProductos />
+            <hr style={{color:'#8B4513', height: '10%', borderWidth:'2px'}} />
             <Row className="mt-5">
                 
                 <Col xl={4} className="d-flex justify-content-center">

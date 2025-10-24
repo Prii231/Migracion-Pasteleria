@@ -1,32 +1,78 @@
 import React from 'react';
 
 
-function filtro() {
+function FiltroProductos () {
     return (
-        <section class="container my-4">
-            <div class="filter-container">
-                <div class="text-center">
-                    <button class="btn filtro-boton botones my-2" style="border-radius: 50px;" data-filter="all">Todos los
-                        productos</button>
-                    <button class="btn filtro-boton botones" style="border-radius: 50px;"
-                        data-filter="torta-cuadrada">Tortas Cuadradas</button>
-                    <button class="btn filtro-boton botones" style="border-radius: 50px;"
-                        data-filter="torta-circular">Tortas Circulares</button>
-                    <button class="btn filtro-boton botones" style="border-radius: 50px;"
-                        data-filter="postre-individual">Postres Individuales</button>
-                    <button class="btn filtro-boton botones" style="border-radius: 50px;" data-filter="sin-azucar">Sin
-                        Azúcar</button>
-                    <button class="btn filtro-boton botones" style="border-radius: 50px;"
-                        data-filter="pasteleria-tradicional">Pastelería Tradicional</button>
-                    <button class="btn filtro-boton botones" style="border-radius: 50px;" data-filter="sin-gluten">Sin
-                        Gluten</button>
-                    <button class="btn filtro-boton botones" style="border-radius: 50px;"
-                        data-filter="vegano">Veganos</button>
-                    <button class="btn filtro-boton botones" style="border-radius: 50px;" data-filter="especial">Tortas
-                        Especiales</button>
+        <section className="container my-4">
+            <div className="filter-container">
+                <div className="text-center">
+                    <button 
+                        className="btn filtro-boton botones my-2" 
+                        style={{ borderRadius: '50px' }} 
+                        data-filter="all"
+                    >
+                        Todos los productos
+                    </button>
+                    <button 
+                        className="btn filtro-boton botones" 
+                        style={{ borderRadius: '50px' }}
+                        data-filter="torta-cuadrada"
+                    >
+                        Tortas Cuadradas
+                    </button>
+                    <button 
+                        className="btn filtro-boton botones" 
+                        style={{ borderRadius: '50px' }}
+                        data-filter="torta-circular"
+                    >
+                        Tortas Circulares
+                    </button>
+                    <button 
+                        className="btn filtro-boton botones" 
+                        style={{ borderRadius: '50px' }}
+                        data-filter="postre-individual"
+                    >
+                        Postres Individuales
+                    </button>
+                    <button 
+                        className="btn filtro-boton botones" 
+                        style={{ borderRadius: '50px' }} 
+                        data-filter="sin-azucar"
+                    >
+                        Sin Azúcar
+                    </button>
+                    <button 
+                        className="btn filtro-boton botones" 
+                        style={{ borderRadius: '50px' }}
+                        data-filter="pasteleria-tradicional"
+                    >
+                        Pastelería Tradicional
+                    </button>
+                    <button 
+                        className="btn filtro-boton botones" 
+                        style={{ borderRadius: '50px' }} 
+                        data-filter="sin-gluten"
+                    >
+                        Sin Gluten
+                    </button>
+                    <button 
+                        className="btn filtro-boton botones" 
+                        style={{ borderRadius: '50px' }}
+                        data-filter="vegano"
+                    >
+                        Veganos
+                    </button>
+                    <button 
+                        className="btn filtro-boton botones" 
+                        style={{ borderRadius: '50px' }} 
+                        data-filter="especial"
+                    >
+                        Tortas Especiales
+                    </button>
                 </div>
             </div>
         </section>
     );
-}
-export default filtro;
+};
+
+export default FiltroProductos;
