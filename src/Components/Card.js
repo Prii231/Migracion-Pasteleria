@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-function Promociones() {
+function Cards() {
     return (
         <Container>
             <Row className="mt-5">
@@ -86,4 +86,4 @@ function Promociones() {
     );
 }
 
-export default Promociones;
+export default Cards;
