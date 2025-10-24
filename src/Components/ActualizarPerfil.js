@@ -77,10 +77,7 @@ function Perfil() {
                 <Row className="justify-content-center">
                     <Col lg={8}>
                         <Card style={{ borderRadius: '15px', border: '2px solid #D2B48C' }}>
-                            <Card.Header 
-                                className="fondoCuerpo text-center" 
-                                style={{ borderRadius: '15px 15px 0 0' }}
-                            >
+                            <Card.Header className="fondoCuerpo text-center" style={{ borderRadius: '15px 15px 0 0' }}>
                                 <h2 style={{ fontFamily: 'Dancing Script', color: '#8B4513', margin: 0 }}>
                                     <i className="fa-solid fa-user-circle me-3"></i>Mi Perfil
                                 </h2>
@@ -89,20 +86,15 @@ function Perfil() {
                             <Card.Body style={{ backgroundColor: '#FFF5E1', padding: '2rem' }}>
                                 <Form id="perfilForm">
                                     <Row className="mb-4">
-                                        <Col xs={12}>
-                                            <h4 style={{ 
-                                                fontFamily: 'Dancing Script', 
-                                                color: '#8B4513', 
-                                                borderBottom: '2px solid #D2B48C', 
-                                                paddingBottom: '10px' 
-                                            }}>
+                                        <Col lg={12}>
+                                            <h4 style={{ fontFamily: 'Dancing Script', color: '#8B4513', borderBottom: '2px solid #D2B48C', paddingBottom: '10px' }}>
                                                 <i className="fa-solid fa-id-card me-2"></i>Información Personal
                                             </h4>
                                         </Col>
                                     </Row>
 
                                     <Row className="mb-3">
-                                        <Col md={6} className="mb-3">
+                                        <Col lg={6} className="mb-3">
                                             <Form.Label htmlFor="nombre" className="textoCuerpo">
                                                 <strong>Nombre</strong>
                                             </Form.Label>
@@ -110,13 +102,13 @@ function Perfil() {
                                                 type="text"
                                                 id="nombre"
                                                 name="nombre"
-                                                placeholder="Ingrese su nombre"
+                                                placeholder="Ingrese su nombre..."
                                                 value={datosFormulario.nombre}
                                                 onChange={handleChange}
                                                 required
                                             />
                                         </Col>
-                                        <Col md={6} className="mb-3">
+                                        <Col lg={6} className="mb-3">
                                             <Form.Label htmlFor="apellido" className="textoCuerpo">
                                                 <strong>Apellido</strong>
                                             </Form.Label>
@@ -124,7 +116,7 @@ function Perfil() {
                                                 type="text"
                                                 id="apellido"
                                                 name="apellido"
-                                                placeholder="Ingrese su apellido"
+                                                placeholder="Ingrese su apellido..."
                                                 value={datosFormulario.apellido}
                                                 onChange={handleChange}
                                                 required
@@ -133,7 +125,7 @@ function Perfil() {
                                     </Row>
 
                                     <Row className="mb-3">
-                                        <Col md={6} className="mb-3">
+                                        <Col lg={6} className="mb-3">
                                             <Form.Label htmlFor="telefono" className="textoCuerpo">
                                                 <strong>Número de Teléfono</strong>
                                             </Form.Label>
@@ -147,7 +139,7 @@ function Perfil() {
                                                 required
                                             />
                                         </Col>
-                                        <Col md={6} className="mb-3">
+                                        <Col lg={6} className="mb-3">
                                             <Form.Label htmlFor="email" className="textoCuerpo">
                                                 <strong>Correo Electrónico</strong>
                                             </Form.Label>
@@ -164,12 +156,12 @@ function Perfil() {
                                     </Row>
 
                                     <Row className="mb-4 mt-5">
-                                        <Col xs={12}>
-                                            <h4 style={{ 
-                                                fontFamily: 'Dancing Script', 
-                                                color: '#8B4513', 
-                                                borderBottom: '2px solid #D2B48C', 
-                                                paddingBottom: '10px' 
+                                        <Col lg={12}>
+                                            <h4 style={{
+                                                fontFamily: 'Dancing Script',
+                                                color: '#8B4513',
+                                                borderBottom: '2px solid #D2B48C',
+                                                paddingBottom: '10px'
                                             }}>
                                                 <i className="fa-solid fa-heart me-2"></i>Preferencias de Productos
                                             </h4>
@@ -180,7 +172,7 @@ function Perfil() {
                                     </Row>
 
                                     <Row>
-                                        <Col md={6} className="mb-2">
+                                        <Col lg={6} className="mb-2">
                                             <Form.Check
                                                 type="checkbox"
                                                 id="torta-cuadrada"
@@ -195,7 +187,7 @@ function Perfil() {
                                                 }
                                             />
                                         </Col>
-                                        <Col md={6} className="mb-2">
+                                        <Col lg={6} className="mb-2">
                                             <Form.Check
                                                 type="checkbox"
                                                 id="torta-circular"
@@ -210,7 +202,7 @@ function Perfil() {
                                                 }
                                             />
                                         </Col>
-                                        <Col md={6} className="mb-2">
+                                        <Col lg={6} className="mb-2">
                                             <Form.Check
                                                 type="checkbox"
                                                 id="postre-individual"
@@ -225,7 +217,7 @@ function Perfil() {
                                                 }
                                             />
                                         </Col>
-                                        <Col md={6} className="mb-2">
+                                        <Col lg={6} className="mb-2">
                                             <Form.Check
                                                 type="checkbox"
                                                 id="sin-azucar"
@@ -240,7 +232,7 @@ function Perfil() {
                                                 }
                                             />
                                         </Col>
-                                        <Col md={6} className="mb-2">
+                                        <Col lg={6} className="mb-2">
                                             <Form.Check
                                                 type="checkbox"
                                                 id="pasteleria-tradicional"
@@ -255,7 +247,7 @@ function Perfil() {
                                                 }
                                             />
                                         </Col>
-                                        <Col md={6} className="mb-2">
+                                        <Col lg={6} className="mb-2">
                                             <Form.Check
                                                 type="checkbox"
                                                 id="sin-gluten"
@@ -270,7 +262,7 @@ function Perfil() {
                                                 }
                                             />
                                         </Col>
-                                        <Col md={6} className="mb-2">
+                                        <Col lg={6} className="mb-2">
                                             <Form.Check
                                                 type="checkbox"
                                                 id="vegano"
@@ -285,7 +277,7 @@ function Perfil() {
                                                 }
                                             />
                                         </Col>
-                                        <Col md={6} className="mb-2">
+                                        <Col lg={6} className="mb-2">
                                             <Form.Check
                                                 type="checkbox"
                                                 id="especial"
@@ -303,8 +295,8 @@ function Perfil() {
                                     </Row>
 
                                     {resultado.show && (
-                                        <Alert 
-                                            variant={resultado.type} 
+                                        <Alert
+                                            variant={resultado.type}
                                             className="mt-3"
                                             dismissible
                                             onClose={() => setResultado({ ...resultado, show: false })}
@@ -314,25 +306,31 @@ function Perfil() {
                                     )}
 
                                     <Row className="mt-5">
-                                        <Col xs={12}>
-                                            <div className="d-flex flex-wrap gap-3 justify-content-center">
-                                                <Button 
-                                                    type="button" 
-                                                    variant="" 
-                                                    className="botones px-4 py-2"
+                                        <Col lg={6}>
+                                            <Row>
+                                                <Button
+                                                    type="button"
+                                                    variant = ""
+                                                    className="botones"
                                                     onClick={handleConfirm}
                                                 >
                                                     <i className="fa-solid fa-check me-2"></i>Confirmar
                                                 </Button>
-                                                <Button 
-                                                    type="reset" 
-                                                    variant="" 
-                                                    className="botones px-4 py-2"
+                                            </Row>
+                                        </Col>
+
+                                        <Col lg={6}>
+                                            <Row>
+                                                <Button
+                                                    type="reset"
+                                                    variant = ""
+                                                    className="botones"
                                                     onClick={handleReset}
                                                 >
                                                     <i className="fa-solid fa-rotate-left me-2"></i>Restablecer
                                                 </Button>
-                                            </div>
+                                            </Row>
+                                            
                                         </Col>
                                     </Row>
                                 </Form>
