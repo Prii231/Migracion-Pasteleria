@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import TarjetasCatalogo from './TarjetasCatalogo';
 
 function CatalogoProductos() {
     return (
@@ -12,21 +13,15 @@ function CatalogoProductos() {
             <Row className="mt-5">
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }} data-category="torta-cuadrada">
-                        <Card.Img variant="top" src="/assets/images/TortaChocolate.png" alt="Torta de Chocolate" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Torta de Chocolate
-                            </Card.Title>
-                            <Card.Text>
-                                Clásica y deliciosa, elaborada con suave bizcocho de cacao y un intenso sabor a chocolate.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$45.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                    
+                    <TarjetasCatalogo 
+                        categoria = "torta-cuadrada"
+                        imagen = "/assets/images/TortaChocolate.png"
+                        titulo = "Torta de Chocolate"
+                        descripcion = "Clásica y deliciosa, elaborada con suave bizcocho de cacao y un intenso sabor a chocolate."
+                        precio = "$45.000"
+                    />
+                    
                 </Col>
 
                 
