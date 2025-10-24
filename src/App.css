@@ -40,3 +40,8 @@
 .bg-cafe{
   background-color: #8B4513 !important;
 }
+
+.filtro-boton.active {
+    background-color: #8B4513;
+    color: white;
+}
