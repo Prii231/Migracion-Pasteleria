@@ -6,10 +6,13 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import TarjetasCatalogo from './TarjetasCatalogo';
+import filtro from './filtro';
 
 function CatalogoProductos() {
     return (
+        
         <Container>
+            <filtro />
             <Row className="mt-5">
                 
                 <Col xl={4} className="d-flex justify-content-center">
