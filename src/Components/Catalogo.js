@@ -5,323 +5,206 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import TarjetasCatalogo from './TarjetasCatalogo';
+import FiltroProductos from './filtro';
 
 function CatalogoProductos() {
     return (
         <Container>
+            <hr style={{color:'#8B4513', height: '10%', borderWidth:'2px'}} />
+            <FiltroProductos />
+            <hr style={{color:'#8B4513', height: '10%', borderWidth:'2px'}} />
             <Row className="mt-5">
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }} data-category="torta-cuadrada">
-                        <Card.Img variant="top" src="/assets/images/TortaChocolate.png" alt="Torta de Chocolate" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Torta de Chocolate
-                            </Card.Title>
-                            <Card.Text>
-                                Clásica y deliciosa, elaborada con suave bizcocho de cacao y un intenso sabor a chocolate.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$45.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                    
+                    <TarjetasCatalogo 
+                        categoria = "torta-cuadrada"
+                        imagen = "/assets/images/TortaChocolate.png"
+                        titulo = "Torta de Chocolate"
+                        descripcion = "Clásica y deliciosa, elaborada con suave bizcocho de cacao y un intenso sabor a chocolate."
+                        precio = "$45.000"
+                    />
                 </Col>
 
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }} data-category="torta-cuadrada">
-                        <Card.Img variant="top" src="/assets/images/TortaFruta.png" alt="Torta de Frutas" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Torta de Frutas
-                            </Card.Title>
-                            <Card.Text>
-                                Fresca y colorida, rellena con frutas de temporada y un bizcocho ligero, cobertura de crema.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$50.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                    
+                    <TarjetasCatalogo 
+                        categoria = "torta-cuadrada"
+                        imagen = "/assets/images/TortaFruta.png"
+                        titulo = "Torta de Frutas"
+                        descripcion = "Fresca y colorida, rellena con frutas de temporada y un bizcocho ligero, cobertura de crema."
+                        precio = "$50.000"
+                    />
                 </Col>
 
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }} data-category="torta-circular">
-                        <Card.Img variant="top" src="/assets/images/TortaVainilla.png" alt="Torta de Vainilla" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Torta de Vainilla
-                            </Card.Title>
-                            <Card.Text>
-                                Un clásico de sabor suave, con esponjoso bizcocho de vainilla y cobertura cremosa.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$40.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                    <TarjetasCatalogo 
+                        categoria = "torta-circular"
+                        imagen = "/assets/images/TortaVainilla.png"
+                        titulo = "Torta de Vainilla"
+                        descripcion = "Un clásico de sabor suave, con esponjoso bizcocho de vainilla y cobertura cremosa."
+                        precio = "$40.000"
+                    />
                 </Col>
             </Row>
 
             <Row className="mt-5">
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }} data-category="torta-circular">
-                        <Card.Img variant="top" src="/assets/images/TortaCircularManjar.png" alt="Torta de Manjar" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Torta de Manjar
-                            </Card.Title>
-                            <Card.Text>
-                                Rellena de tradicional manjar chileno, con un toque casero y dulce irresistible.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$42.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                    <TarjetasCatalogo 
+                        categoria = "torta-circular"
+                        imagen = "/assets/images/TortaCircularManjar.png"
+                        titulo = "Torta de Manjar"
+                        descripcion = "Rellena de tradicional manjar chileno, con un toque casero y dulce irresistible."
+                        precio = "$42.000"
+                    />
                 </Col>
 
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }}>
-                        <Card.Img variant="top" src="/assets/images/PostreMousseChocolate.png" alt="Mousse de Chocolate" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Mousse de Chocolate
-                            </Card.Title>
-                            <Card.Text>
-                                Textura ligera y cremosa, con un sabor intenso para los amantes del chocolate.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$5.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                    <TarjetasCatalogo 
+                        categoria = "postre"
+                        imagen = "/assets/images/PostreMousseChocolate.png"
+                        titulo = "Mousse de Chocolate"
+                        descripcion = "Textura ligera y cremosa, con un sabor intenso para los amantes del chocolate."
+                        precio = "$5.000"
+                    />
                 </Col>
 
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }}>
-                        <Card.Img variant="top" src="/assets/images/PostreTiramisu.png" alt="Tiramisú Clásico" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Tiramisú Clásico
-                            </Card.Title>
-                            <Card.Text>
-                                Postre italiano con capas de bizcocho, café y suave crema de mascarpone.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$5.500</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                    <TarjetasCatalogo 
+                        categoria = "postre"
+                        imagen = "/assets/images/PostreTiramisu.png"
+                        titulo = "Tiramisú Clásico"
+                        descripcion = "Postre italiano con capas de bizcocho, café y suave crema de mascarpone."
+                        precio = "$5.500"
+                    />
+                </Col>
+            </Row>
+
+            <Row className="mt-5">
+                <Col xl={4} className="d-flex justify-content-center">
+                <TarjetasCatalogo 
+                        categoria = "torta-circular"
+                        imagen = "/assets/images/TortaNaranja.png"
+                        titulo = "Torta de Naranja"
+                        descripcion = "Opción saludable, con el frescor de la naranja y apta para quienes evitan el azúcar."
+                        precio = "$48.000"
+                    />
+                    
+                </Col>
+
+                
+                <Col xl={4} className="d-flex justify-content-center">
+                <TarjetasCatalogo 
+                        categoria = "postre"
+                        imagen = "/assets/images/Cheesecake.png"
+                        titulo = "Cheesecake sin Azúcar"
+                        descripcion = "Suave y cremoso, endulzado naturalmente para disfrutar sin culpas."
+                        precio = "$47.000"
+                    />
+            
+                </Col>
+
+                
+                <Col xl={4} className="d-flex justify-content-center">
+                <TarjetasCatalogo 
+                        categoria = "postre"
+                        imagen = "/assets/images/EmpanadaManzana.png"
+                        titulo = "Empanada de Manzana"
+                        descripcion = "Clásico postre de masa dorada horneada y relleno de manzanas especiadas.."
+                        precio = "$3.000"
+                    />
+                    
                 </Col>
             </Row>
 
             <Row className="mt-5">
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }}>
-                        <Card.Img variant="top" src="/assets/images/TortaNaranja.png" alt="Torta de Naranja" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Torta de Naranja
-                            </Card.Title>
-                            <Card.Text>
-                                Opción saludable, con el frescor de la naranja y apta para quienes evitan el azúcar.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$48.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                <TarjetasCatalogo 
+                        categoria = "sin-gluten"
+                        imagen = "/assets/images/PanSinGluten.png"
+                        titulo = "Pan sin Gluten"
+                        descripcion = "Alternativa nutritiva y ligera, ideal para personas celíacas o con intolerancia al gluten."
+                        precio = "$3.500"
+                    />
+                    
                 </Col>
 
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }}>
-                        <Card.Img variant="top" src="/assets/images/Cheesecake.png" alt="Cheesecake sin Azúcar" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Cheesecake sin Azúcar
-                            </Card.Title>
-                            <Card.Text>
-                                Suave y cremoso, endulzado naturalmente para disfrutar sin culpas.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$47.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                <TarjetasCatalogo 
+                        categoria = "torta-circular"
+                        imagen = "/assets/images/TartaSantiago.png"
+                        titulo = "Tarta de Santiago"
+                        descripcion = " Receta tradicional gallega a base de almendras, con un sabor auténtico y delicado."
+                        precio = "$6.000"
+                    />
+                    
                 </Col>
 
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }}>
-                        <Card.Img variant="top" src="/assets/images/EmpanadaManzana.png" alt="Empanada de Manzana" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Empanada de Manzana
-                            </Card.Title>
-                            <Card.Text>
-                                Clásico postre de masa dorada horneada y relleno de manzanas especiadas.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$3.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                <TarjetasCatalogo 
+                        categoria = "sin-gluten"
+                        imagen = "/assets/images/Brownie.png"
+                        titulo = "Brownie sin Gluteno"
+                        descripcion = "Denso, húmedo y chocolatoso, pensado para quienes buscan opciones sin gluten."
+                        precio = "$4.000"
+                    />
                 </Col>
             </Row>
 
             <Row className="mt-5">
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }}>
-                        <Card.Img variant="top" src="/assets/images/PanSinGluten.png" alt="Pan sin Gluten" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Pan sin Gluten
-                            </Card.Title>
-                            <Card.Text>
-                                Alternativa nutritiva y ligera, ideal para personas celíacas o con intolerancia al gluten.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$3.500</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                <TarjetasCatalogo 
+                        categoria = "vegano"
+                        imagen = "/assets/images/TortaVeganaChocolate.png"
+                        titulo = "Torta Vegana de Chocolate"
+                        descripcion = "Sin ingredientes de origen animal, pero con todo el sabor y la intensidad del cacao."
+                        precio = "$50.000"
+                    />
                 </Col>
 
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }}>
-                        <Card.Img variant="top" src="/assets/images/TartaSantiago.png" alt="Tarta de Santiago" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Tarta de Santiago
-                            </Card.Title>
-                            <Card.Text>
-                                Receta tradicional gallega a base de almendras, con un sabor auténtico y delicado.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$6.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                <TarjetasCatalogo 
+                        categoria = "vegano"
+                        imagen = "/assets/images/GalletaAvena.png"
+                        titulo = "Galletas Veganas de Avena"
+                        descripcion = "Crujientes y saludables, endulzadas de forma ligera, perfectas para acompañar un café o té."
+                        precio = "$4.500"
+                    />
                 </Col>
 
                 
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }}>
-                        <Card.Img variant="top" src="/assets/images/Brownie.png" alt="Brownie sin Gluten" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Brownie sin Gluten
-                            </Card.Title>
-                            <Card.Text>
-                                Denso, húmedo y chocolatoso, pensado para quienes buscan opciones sin gluten.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$4.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-
-            <Row className="mt-5">
-                
-                <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }}>
-                        <Card.Img variant="top" src="/assets/images/TortaVeganaChocolate.png" alt="Torta Vegana de Chocolate" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Torta Vegana de Chocolate
-                            </Card.Title>
-                            <Card.Text>
-                                Sin ingredientes de origen animal, pero con todo el sabor y la intensidad del cacao.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$50.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-
-                
-                <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }}>
-                        <Card.Img variant="top" src="/assets/images/GalletaAvena.png" alt="Galletas Veganas de Avena" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Galletas Veganas de Avena
-                            </Card.Title>
-                            <Card.Text>
-                                Crujientes y saludables, endulzadas de forma ligera, perfectas para acompañar un café o té.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$4.500</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-
-                
-                <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }}>
-                        <Card.Img variant="top" src="/assets/images/TortaCumpleaños.png" alt="Torta Especial de Cumpleaños" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Torta Esp. de Cumpleaños
-                            </Card.Title>
-                            <Card.Text>
-                                Personalizada para celebrar momentos únicos, con diseños y sabores a elección.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$55.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                <TarjetasCatalogo 
+                        categoria = "especial"
+                        imagen = "/assets/images/TortaCumpleaños.png"
+                        titulo = "Torta Especial de Cumpleaños"
+                        descripcion = "Personalizada para celebrar momentos únicos, con diseños y sabores a elección."
+                        precio = "$55.000"
+                    />
                 </Col>
             </Row>
 
             <Row className="mt-5">
                
                 <Col xl={4} className="d-flex justify-content-center">
-                    <Card style={{ width: '70%' }}>
-                        <Card.Img variant="top" src="/assets/images/TortaBoda.png" alt="Torta Especial de Boda" />
-                        <Card.Body>
-                            <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                                Torta Especial de Boda
-                            </Card.Title>
-                            <Card.Text>
-                                Elegante y sofisticada, diseñada para el gran día, con detalles únicos y un sabor inolvidable.
-                            </Card.Text>
-                            <h4>
-                                <p style={{ color: '#8B4513' }}>$60.000</p>
-                            </h4>
-                            <Button as={Link} to="#" variant="" className="botones">Agregar al Carrito</Button>
-                        </Card.Body>
-                    </Card>
+                <TarjetasCatalogo 
+                        categoria = "especial"
+                        imagen = "/assets/images/TortaBoda.png"
+                        titulo = "Torta Especial de Boda"
+                        descripcion = "Elegante y sofisticada, diseñada para el gran día, con detalles únicos y un sabor inolvidable.."
+                        precio = "$60.000"
+                    />
                 </Col>
             </Row>
         </Container>

@@ -3,19 +3,19 @@ import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-function TarjetasCatalogo({ imagen, titulo, descripcion, precio, categoria }) {
+function TarjetasCatalogo(props) {
     return (
-        <Card style={{ width: '70%' }} data-category={categoria}>
-            <Card.Img variant="top" src={imagen} alt={titulo} />
+        <Card style={{ width: '70%' }} data-category={props.categoria}>
+            <Card.Img variant="top" src={props.imagen} alt={props.titulo} />
             <Card.Body>
                 <Card.Title style={{ fontFamily: 'Dancing Script', fontSize: '160%' }}>
-                    {titulo}
+                    {props.titulo}
                 </Card.Title>
                 <Card.Text>
-                    {descripcion}
+                    {props.descripcion}
                 </Card.Text>
                 <h4>
-                    <p style={{ color: '#8B4513' }}>{precio}</p>
+                    <p style={{ color: '#8B4513' }}>{props.precio}</p>
                 </h4>
                 <Button as={Link} to="#" variant="" className="botones">
                     Agregar al Carrito
