@@ -10,7 +10,7 @@ function Cards() {
     return (
         <Container>
             <Row className="mt-5">
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                     <Card style={{width: '70%', height: '100%'}}>
                         <Card.Img 
                             variant="top" 
@@ -34,7 +34,7 @@ function Cards() {
                     </Card>
                 </Col>
 
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                     <Card style={{width: '70%'}}>
                         <Card.Img 
                             variant="top" 
@@ -58,7 +58,7 @@ function Cards() {
                     </Card>
                 </Col>
 
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                     <Card className="d-flex flex-column" style={{width: '70%', height: '100%'}}>
                         <Card.Img 
                             variant="top" 

@@ -6,7 +6,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import './Navbar.css';
 import logo from '../assets/images/LogoTitle.png';
 
 function NavbarPrincipal() {
@@ -36,9 +35,13 @@ function NavbarPrincipal() {
                                 <Nav.Link as={Link} to="/">
                                     <Button variant="" className="botones ms-3">Inicio</Button>
                                 </Nav.Link>
-                                
+
                                 <Nav.Link as={Link} to="/catalogo">
                                     <Button variant="" className="botones ms-3">Productos</Button>
+                                </Nav.Link>
+
+                                <Nav.Link as={Link} to="/dashboard">
+                                    <Button variant="" className="botones ms-3">Administración</Button>
                                 </Nav.Link>
                             </Nav>
 

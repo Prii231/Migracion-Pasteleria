@@ -1,0 +1,323 @@
+{
+  "uuid": "2ff494f7-b5f9-4c1a-ab34-75080c2074a5",
+  "lastMigration": 33,
+  "name": "Pastelería API",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "routes": [
+    {
+      "uuid": "7f5bb04b-a122-4049-a039-00a67f648444",
+      "documentation": "Endpoint para obtener los KPIs del dashboard",
+      "method": "get",
+      "endpoint": "api/kpis",
+      "responses": [
+        {
+          "uuid": "e7f96e7f-f9ee-44a1-8410-1fde78488dee",
+          "body": "{\n  \"ventasTotales\": 8450000,\n  \"productoMasVendido\": \"Torta de Chocolate\",\n  \"cantidadVendida\": 156,\n  \"totalUsuarios\": 1247,\n  \"nuevosUsuariosMes\": 43,\n  \"tasaConversion\": 3.8\n}",
+          "latency": 0,
+          "statusCode": 202,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": [],
+          "bodyType": "INLINE",
+          "databucketID": ""
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "c50f3b04-68b0-4c34-8908-788cb7be6bac",
+      "documentation": "Endpoint para obtener ventas por zona geográfica",
+      "method": "get",
+      "endpoint": "api/ventas-zona",
+      "responses": [
+        {
+          "uuid": "b1635ed2-682e-49e6-a18e-f63a9a741504",
+          "body": "[\n  { \"zona\": \"Santiago Centro\", \"ventas\": 2850000 },\n  { \"zona\": \"Providencia\", \"ventas\": 2150000 },\n  { \"zona\": \"Las Condes\", \"ventas\": 1890000 },\n  { \"zona\": \"Ñuñoa\", \"ventas\": 1560000 },\n  { \"zona\": \"Maipú\", \"ventas\": 1420000 },\n  { \"zona\": \"La Florida\", \"ventas\": 980000 }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": [],
+          "bodyType": "INLINE",
+          "databucketID": ""
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "d2d07a41-5920-4ba5-9006-64fce073be24",
+      "documentation": "Endpoint para obtener categorías más vendidas",
+      "method": "get",
+      "endpoint": "api/categorias-vendidas",
+      "responses": [
+        {
+          "uuid": "1036184b-4516-43a8-8afa-fbb25d97a1f6",
+          "body": "[\n  { \"categoria\": \"Tortas Circulares\", \"cantidad\": 245 },\n  { \"categoria\": \"Postres Individuales\", \"cantidad\": 189 },\n  { \"categoria\": \"Tortas Cuadradas\", \"cantidad\": 167 },\n  { \"categoria\": \"Tortas Especiales\", \"cantidad\": 98 },\n  { \"categoria\": \"Veganos\", \"cantidad\": 76 },\n  { \"categoria\": \"Sin Gluten\", \"cantidad\": 54 }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": [],
+          "bodyType": "INLINE",
+          "databucketID": ""
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "3bacca4f-1f8f-4d6c-91d1-da06b351da43",
+      "documentation": "Endpoint para obtener catálogo de productos",
+      "method": "get",
+      "endpoint": "api/productos",
+      "responses": [
+        {
+          "uuid": "37c42b37-e0c5-4651-aecb-a3f909de38d5",
+          "body": "[\n  { \"id\": 1, \"nombre\": \"Torta de Chocolate Premium\", \"categoria\": \"Tortas Circulares\", \"precio\": 18500, \"stock\": 24, \"imagen\": \"/assets/images/TortaChocolate.png\" },\n  { \"id\": 2, \"nombre\": \"Torta de Frutas Tropical\", \"categoria\": \"Tortas Circulares\", \"precio\": 16900, \"stock\": 18, \"imagen\": \"/assets/images/TortaFruta.png\" },\n  { \"id\": 3, \"nombre\": \"Torta de Vainilla Clásica\", \"categoria\": \"Tortas Circulares\", \"precio\": 14500, \"stock\": 32, \"imagen\": \"/assets/images/TortaVainilla.png\" },\n  { \"id\": 4, \"nombre\": \"Torta Cuadrada Manjar\", \"categoria\": \"Tortas Cuadradas\", \"precio\": 19500, \"stock\": 15, \"imagen\": \"/assets/images/TortaCircularManjar.png\" },\n  { \"id\": 5, \"nombre\": \"Cheesecake de Frutos Rojos\", \"categoria\": \"Postres Individuales\", \"precio\": 4500, \"stock\": 48, \"imagen\": \"/assets/images/Cheesecake.png\" },\n  { \"id\": 6, \"nombre\": \"Tiramisú Italiano\", \"categoria\": \"Postres Individuales\", \"precio\": 5200, \"stock\": 36, \"imagen\": \"/assets/images/PostreTiramisu.png\" },\n  { \"id\": 7, \"nombre\": \"Mousse de Chocolate\", \"categoria\": \"Postres Individuales\", \"precio\": 3800, \"stock\": 52, \"imagen\": \"/assets/images/PostreMousseChocolate.png\" },\n  { \"id\": 8, \"nombre\": \"Brownie de Nuez\", \"categoria\": \"Postres Individuales\", \"precio\": 3200, \"stock\": 64, \"imagen\": \"/assets/images/Brownie.png\" },\n  { \"id\": 9, \"nombre\": \"Pan Sin Gluten\", \"categoria\": \"Sin Gluten\", \"precio\": 4800, \"stock\": 28, \"imagen\": \"/assets/images/PanSinGluten.png\" },\n  { \"id\": 10, \"nombre\": \"Torta Vegana de Chocolate\", \"categoria\": \"Veganos\", \"precio\": 22000, \"stock\": 12, \"imagen\": \"/assets/images/TortaVeganaChocolate.png\" },\n  { \"id\": 11, \"nombre\": \"Torta de Cumpleaños Personalizada\", \"categoria\": \"Tortas Especiales\", \"precio\": 35000, \"stock\": 8, \"imagen\": \"/assets/images/TortaCumpleaños.png\" },\n  { \"id\": 12, \"nombre\": \"Torta de Boda 3 Pisos\", \"categoria\": \"Tortas Especiales\", \"precio\": 125000, \"stock\": 3, \"imagen\": \"/assets/images/TortaBoda.png\" }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": [],
+          "bodyType": "INLINE",
+          "databucketID": ""
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "dda778b9-4fdf-431d-9ccd-335c5c22bcb6",
+      "documentation": "Endpoint para obtener lista de usuarios",
+      "method": "get",
+      "endpoint": "api/usuarios",
+      "responses": [
+        {
+          "uuid": "dd22a74e-b20b-42a6-84ef-b6ef331d49f9",
+          "body": "[\n  { \"id\": 1, \"nombre\": \"María González\", \"email\": \"maria.gonzalez@example.com\", \"fechaRegistro\": \"2024-11-15\", \"estado\": \"activo\" },\n  { \"id\": 2, \"nombre\": \"Juan Pérez\", \"email\": \"juan.perez@example.com\", \"fechaRegistro\": \"2024-11-20\", \"estado\": \"activo\" },\n  { \"id\": 3, \"nombre\": \"Ana Martínez\", \"email\": \"ana.martinez@example.com\", \"fechaRegistro\": \"2024-11-22\", \"estado\": \"activo\" },\n  { \"id\": 4, \"nombre\": \"Carlos Rojas\", \"email\": \"carlos.rojas@example.com\", \"fechaRegistro\": \"2024-10-08\", \"estado\": \"inactivo\" },\n  { \"id\": 5, \"nombre\": \"Laura Sánchez\", \"email\": \"laura.sanchez@example.com\", \"fechaRegistro\": \"2024-11-25\", \"estado\": \"activo\" },\n  { \"id\": 6, \"nombre\": \"Pedro Torres\", \"email\": \"pedro.torres@example.com\", \"fechaRegistro\": \"2024-11-28\", \"estado\": \"activo\" },\n  { \"id\": 7, \"nombre\": \"Sofía Vargas\", \"email\": \"sofia.vargas@example.com\", \"fechaRegistro\": \"2024-09-12\", \"estado\": \"activo\" },\n  { \"id\": 8, \"nombre\": \"Diego Fernández\", \"email\": \"diego.fernandez@example.com\", \"fechaRegistro\": \"2024-08-30\", \"estado\": \"inactivo\" }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": [],
+          "bodyType": "INLINE",
+          "databucketID": ""
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "aff922a6-5d9d-4e02-90b4-e65ee0bf9da6",
+      "documentation": "Endpoint para obtener comentarios recientes",
+      "method": "get",
+      "endpoint": "api/comentarios",
+      "responses": [
+        {
+          "uuid": "4cce4f6c-febd-4208-8436-5be28f94acba",
+          "body": "[\n  { \"id\": 1, \"nombreUsuario\": \"María González\", \"producto\": \"Torta de Chocolate Premium\", \"comentario\": \"Excelente torta! El chocolate es de muy buena calidad y la presentación impecable. La pedí para un cumpleaños y todos quedaron encantados.\", \"calificacion\": 5, \"fecha\": \"2024-11-30\" },\n  { \"id\": 2, \"nombreUsuario\": \"Juan Pérez\", \"producto\": \"Tiramisú Italiano\", \"comentario\": \"Muy rico, pero esperaba un poco más de café en el sabor. Aún así, lo recomiendo totalmente.\", \"calificacion\": 4, \"fecha\": \"2024-11-29\" },\n  { \"id\": 3, \"nombreUsuario\": \"Ana Martínez\", \"producto\": \"Cheesecake de Frutos Rojos\", \"comentario\": \"¡Simplemente delicioso! La textura es perfecta y los frutos rojos le dan un toque especial. Volveré a comprar sin duda.\", \"calificacion\": 5, \"fecha\": \"2024-11-28\" },\n  { \"id\": 4, \"nombreUsuario\": \"Laura Sánchez\", \"producto\": \"Torta Vegana de Chocolate\", \"comentario\": \"Como vegana, es difícil encontrar postres de buena calidad. Esta torta superó mis expectativas. ¡Increíble!\", \"calificacion\": 5, \"fecha\": \"2024-11-27\" },\n  { \"id\": 5, \"nombreUsuario\": \"Carlos Rojas\", \"producto\": \"Brownie de Nuez\", \"comentario\": \"Bueno, pero un poco seco para mi gusto. El sabor es rico, pero le falta humedad.\", \"calificacion\": 3, \"fecha\": \"2024-11-26\" },\n  { \"id\": 6, \"nombreUsuario\": \"Sofía Vargas\", \"producto\": \"Torta de Cumpleaños Personalizada\", \"comentario\": \"¡Quedó hermosa! El diseño personalizado era exactamente lo que pedí. Además, el sabor era espectacular. Muchas gracias.\", \"calificacion\": 5, \"fecha\": \"2024-11-25\" }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": [],
+          "bodyType": "INLINE",
+          "databucketID": ""
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "callbacks": [],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "7f5bb04b-a122-4049-a039-00a67f648444"
+    },
+    {
+      "type": "route",
+      "uuid": "d2d07a41-5920-4ba5-9006-64fce073be24"
+    },
+    {
+      "type": "route",
+      "uuid": "c50f3b04-68b0-4c34-8908-788cb7be6bac"
+    },
+    {
+      "type": "route",
+      "uuid": "3bacca4f-1f8f-4d6c-91d1-da06b351da43"
+    },
+    {
+      "type": "route",
+      "uuid": "dda778b9-4fdf-431d-9ccd-335c5c22bcb6"
+    },
+    {
+      "type": "route",
+      "uuid": "aff922a6-5d9d-4e02-90b4-e65ee0bf9da6"
+    }
+  ],
+  "folders": [],
+  "data": []
+}
