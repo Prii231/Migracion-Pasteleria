@@ -10,7 +10,6 @@ import axios from 'axios';
 const TablaProductos = () => {
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
-  const [busqueda, setBusqueda] = useState('');
   const [mostrarModal, setMostrarModal] = useState(false);
   const [productoSeleccionado, setProductoSeleccionado] = useState(null);
 
@@ -61,12 +60,6 @@ const TablaProductos = () => {
     );
   }
 
-  // Filtrar productos según la búsqueda
-  const productosFiltrados = productos.filter(producto =>
-    producto.nombre.toLowerCase().includes(busqueda.toLowerCase()) ||
-    producto.categoria.toLowerCase().includes(busqueda.toLowerCase())
-  );
-
   // Función para abrir el modal con detalles del producto
   const verDetalles = (producto) => {
     setProductoSeleccionado(producto);
@@ -90,10 +83,10 @@ const TablaProductos = () => {
         
       </div>
 
-      {/* Grid de Cards de Productos */}
+      {/*Cards de Productos */}
       <Row className="productos-grid">
-        {productosFiltrados.length > 0 ? (
-          productosFiltrados.map((producto) => (
+        {productos.length > 0 ? (
+          productos.map((producto) => (
             <Col xs={12} sm={6} md={4} lg={3} key={producto.id} className="mb-4">
               <Card className="producto-card h-100">
                 {/* Imagen del producto */}
@@ -131,7 +124,7 @@ const TablaProductos = () => {
                   </div>
                 </Card.Body>
 
-                {/* Footer con acciones */}
+                {/* Footer  */}
                 <Card.Footer className="producto-card-footer">
                   <div className="d-flex gap-2">
                     <button
@@ -162,8 +155,8 @@ const TablaProductos = () => {
         ) : (
           <Col xs={12}>
             <div className="sin-resultados-productos">
-              <i className="fas fa-search me-2"></i>
-              No se encontraron productos con "{busqueda}"
+              <i className="fas fa-box-open me-2"></i>
+              No hay productos disponibles
             </div>
           </Col>
         )}

@@ -10,7 +10,7 @@ import axios from 'axios';
 const TablaUsuarios = () => {
   const [usuarios, setUsuarios] = useState([]);
   const [cargando, setCargando] = useState(true);
-  const [busqueda, setBusqueda] = useState('');
+  
 
   // Cargar datos al montar el componente
   useEffect(() => {
@@ -58,12 +58,7 @@ const TablaUsuarios = () => {
       </div>
     );
   }
-
-  // Filtrar usuarios según la búsqueda
-  const usuariosFiltrados = usuarios.filter(usuario =>
-    usuario.nombre.toLowerCase().includes(busqueda.toLowerCase()) ||
-    usuario.email.toLowerCase().includes(busqueda.toLowerCase())
-  );
+ 
 
   // Función para formatear fecha
   const formatearFecha = (fecha) => {
@@ -88,8 +83,8 @@ const TablaUsuarios = () => {
 
       {/* Grid de Cards de Usuarios */}
       <Row className="usuarios-grid">
-        {usuariosFiltrados.length > 0 ? (
-          usuariosFiltrados.map((usuario) => (
+        {usuarios.length > 0 ? (
+          usuarios.map((usuario) => (
             <Col xs={12} sm={6} md={4} key={usuario.id} className="mb-4">
               <Card className="usuario-card h-100">
                 {/* Header con rol/estado */}
@@ -157,7 +152,7 @@ const TablaUsuarios = () => {
           <Col xs={12}>
             <div className="sin-resultados-usuarios">
               <i className="fas fa-search me-2"></i>
-              No se encontraron usuarios con "{busqueda}"
+              No se encontraron usuarios registrados
             </div>
           </Col>
         )}
