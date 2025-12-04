@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Table } from 'react-bootstrap';
+import { Card, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 
 /**
- * Componente de Tabla de Usuarios Registrados
- * Muestra la lista de usuarios con opciones de búsqueda y gestión
+ * Componente de Cards de Usuarios Registrados
+ * Muestra la lista de usuarios en formato de tarjetas con su información
  * Obtiene sus propios datos desde la API
  */
 const TablaUsuarios = () => {
@@ -28,23 +28,30 @@ const TablaUsuarios = () => {
     cargarDatos();
   }, []);
 
-  // Si no hay usuarios, mostrar mensaje
+  // Si está cargando, mostrar mensaje
   if (cargando) {
     return (
-      <div className="tabla-contenedor">
-        <h5 className="tabla-titulo">Lista de Usuarios</h5>
-        <div className="sin-datos-tabla">
-          <p>Cargando...</p>
+      <div className="usuarios-contenedor">
+        <h5 className="usuarios-titulo">
+          <i className="fas fa-users me-2"></i>
+          Lista de Usuarios Registrados
+        </h5>
+        <div className="sin-datos-usuarios">
+          <p>Cargando usuarios...</p>
         </div>
       </div>
     );
   }
 
+  // Si no hay usuarios, mostrar mensaje
   if (!usuarios || usuarios.length === 0) {
     return (
-      <div className="tabla-contenedor">
-        <h5 className="tabla-titulo">Lista de Usuarios</h5>
-        <div className="sin-datos-tabla">
+      <div className="usuarios-contenedor">
+        <h5 className="usuarios-titulo">
+          <i className="fas fa-users me-2"></i>
+          Lista de Usuarios Registrados
+        </h5>
+        <div className="sin-datos-usuarios">
           <i className="fas fa-users"></i>
           <p>No hay usuarios registrados</p>
         </div>
@@ -63,126 +70,101 @@ const TablaUsuarios = () => {
     const date = new Date(fecha);
     return date.toLocaleDateString('es-CL', {
       year: 'numeric',
-      month: 'short',
+      month: 'long',
       day: 'numeric'
     });
   };
 
-  // Función para manejar acciones
-  const manejarVer = (id) => {
-    console.log('Ver detalles del usuario:', id);
-    // Aquí iría la lógica para ver detalles
-  };
-
-  const manejarCambiarEstado = (id, estadoActual) => {
-    console.log('Cambiar estado del usuario:', id, 'Estado actual:', estadoActual);
-    // Aquí iría la lógica para activar/desactivar usuario
-  };
-
   return (
-    <div className="tabla-contenedor">
+    <div className="usuarios-contenedor">
       {/* Encabezado con título y buscador */}
-      <div className="tabla-header">
-        <h5 className="tabla-titulo">
+      <div className="usuarios-header">
+        <h5 className="usuarios-titulo">
           <i className="fas fa-users me-2"></i>
           Lista de Usuarios Registrados
         </h5>
-        <div className="buscador-tabla">
-          <i className="fas fa-search"></i>
-          <input
-            type="text"
-            placeholder="Buscar usuario..."
-            value={busqueda}
-            onChange={(e) => setBusqueda(e.target.value)}
-            className="input-busqueda"
-          />
-        </div>
+        
       </div>
 
-      {/* Tabla responsive */}
-      <div className="tabla-scroll">
-        <Table hover className="tabla-personalizada">
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Email</th>
-              <th>Fecha Registro</th>
-              <th>Estado</th>
-              <th className="text-center">Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            {usuariosFiltrados.length > 0 ? (
-              usuariosFiltrados.map((usuario) => (
-                <tr key={usuario.id}>
-                  {/* Columna de nombre */}
-                  <td className="usuario-nombre">
-                    <i className="fas fa-user-circle me-2" style={{ color: '#8B4513' }}></i>
-                    {usuario.nombre}
-                  </td>
+      {/* Grid de Cards de Usuarios */}
+      <Row className="usuarios-grid">
+        {usuariosFiltrados.length > 0 ? (
+          usuariosFiltrados.map((usuario) => (
+            <Col xs={12} sm={6} md={4} key={usuario.id} className="mb-4">
+              <Card className="usuario-card h-100">
+                {/* Header con rol/estado */}
+                <Card.Header className="usuario-card-header">
+                  
+                </Card.Header>
 
-                  {/* Columna de email */}
-                  <td className="usuario-email">{usuario.email}</td>
+                {/* Cuerpo de la tarjeta */}
+                <Card.Body className="usuario-card-body">
+                  <Row>
+                    <Col xs={7}>
+                      {/* Nombre del usuario */}
+                      <h4 className="usuario-card-nombre">
+                        <strong>{usuario.nombre}</strong>
+                      </h4>
 
-                  {/* Columna de fecha */}
-                  <td className="usuario-fecha">
-                    {formatearFecha(usuario.fechaRegistro)}
-                  </td>
+                      {/* Email */}
+                      <p className="usuario-card-info">
+                        <i className="fas fa-envelope me-2" style={{ color: '#8B4513' }}></i>
+                        {usuario.email}
+                      </p>
 
-                  {/* Columna de estado */}
-                  <td>
-                    <span className={`badge-estado ${usuario.estado === 'activo' ? 'estado-activo' : 'estado-inactivo'}`}>
-                      {usuario.estado === 'activo' ? (
-                        <>
-                          <i className="fas fa-check-circle me-1"></i>
-                          Activo
-                        </>
-                      ) : (
-                        <>
-                          <i className="fas fa-times-circle me-1"></i>
-                          Inactivo
-                        </>
-                      )}
-                    </span>
-                  </td>
+                      {/* Información adicional */}
+                      <ul className="usuario-card-detalles">
+                        <li>
+                          <span className="detalle-icono">
+                            <i className="fas fa-calendar-alt"></i>
+                          </span>
+                          Registro: {formatearFecha(usuario.fechaRegistro)}
+                        </li>
+                      </ul>
+                    </Col>
 
-                  {/* Columna de acciones */}
-                  <td className="text-center">
+                    {/* Avatar del usuario */}
+                    <Col xs={5} className="text-center">
+                      <div className="usuario-avatar-grande">
+                        {usuario.nombre.charAt(0).toUpperCase()}
+                      </div>
+                    </Col>
+                  </Row>
+                </Card.Body>
+
+                {/* Footer con acciones */}
+                <Card.Footer className="usuario-card-footer">
+                  <div className="text-end">
                     <button
-                      className="btn-accion btn-ver"
-                      onClick={() => manejarVer(usuario.id)}
+                      className="btn-usuario-accion btn-mensaje"
+                      title="Enviar mensaje"
+                    >
+                      <i className="fas fa-comments"></i>
+                    </button>
+                    <button
+                      className="btn-usuario-accion btn-ver-detalles"
                       title="Ver detalles"
                     >
-                      <i className="fas fa-eye"></i>
+                      <i className="fas fa-user me-1"></i>
+                      Ver Detalles
                     </button>
-                    <button
-                      className={`btn-accion ${usuario.estado === 'activo' ? 'btn-desactivar' : 'btn-activar'}`}
-                      onClick={() => manejarCambiarEstado(usuario.id, usuario.estado)}
-                      title={usuario.estado === 'activo' ? 'Desactivar' : 'Activar'}
-                    >
-                      <i className={`fas ${usuario.estado === 'activo' ? 'fa-ban' : 'fa-check'}`}></i>
-                    </button>
-                  </td>
-                </tr>
-              ))
-            ) : (
-              <tr>
-                <td colSpan="5" className="text-center sin-resultados">
-                  <i className="fas fa-search me-2"></i>
-                  No se encontraron usuarios con "{busqueda}"
-                </td>
-              </tr>
-            )}
-          </tbody>
-        </Table>
-      </div>
+                  </div>
+                </Card.Footer>
+              </Card>
+            </Col>
+          ))
+        ) : (
+          <Col xs={12}>
+            <div className="sin-resultados-usuarios">
+              <i className="fas fa-search me-2"></i>
+              No se encontraron usuarios con "{busqueda}"
+            </div>
+          </Col>
+        )}
+      </Row>
 
-      {/* Footer con contador */}
-      <div className="tabla-footer">
-        <p className="contador-productos">
-          Mostrando {usuariosFiltrados.length} de {usuarios.length} usuarios
-        </p>
-      </div>
+      
+      
     </div>
   );
 };
