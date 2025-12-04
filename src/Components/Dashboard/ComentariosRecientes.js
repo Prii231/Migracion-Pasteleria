@@ -141,14 +141,6 @@ const ComentariosRecientes = () => {
           </div>
         ))}
       </div>
-
-      {/* Ver más */}
-      <div className="comentarios-footer">
-        <button className="btn-ver-mas">
-          Ver todos los comentarios
-          <i className="fas fa-arrow-right ms-2"></i>
-        </button>
-      </div>
     </div>
   );
 };
