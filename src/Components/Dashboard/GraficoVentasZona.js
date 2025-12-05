@@ -2,11 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import axios from 'axios';
 
-/**
- * Componente de Gráfico de Barras para Ventas por Zona Geográfica
- * Muestra las ventas organizadas por zona en un gráfico de barras
- * Obtiene sus propios datos desde la API
- */
 const GraficoVentasZona = () => {
   const [datos, setDatos] = useState([]);
   const [cargando, setCargando] = useState(true);

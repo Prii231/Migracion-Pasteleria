@@ -2,11 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import axios from 'axios';
 
-/**
- * Componente de Gráfico de Torta para Categorías Más Vendidas
- * Muestra las categorías de productos más vendidas en un gráfico circular
- * Obtiene sus propios datos desde la API
- */
+
 const GraficoCategorias = () => {
   const [datos, setDatos] = useState([]);
   const [cargando, setCargando] = useState(true);

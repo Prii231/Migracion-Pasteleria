@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-/**
- * Componente de Tarjeta KPI (Key Performance Indicator)
- * Muestra un indicador clave de rendimiento con icono, título, valor y descripción
- * Obtiene sus propios datos desde la API
- */
+
 const TarjetaKPI = ({ tipo, icono, titulo, colorIcono = '#8B4513' }) => {
   const [datos, setDatos] = useState(null);
   const [cargando, setCargando] = useState(true);

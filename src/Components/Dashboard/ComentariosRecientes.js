@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-/**
- * Componente de Widget de Comentarios Recientes
- * Muestra un feed de los últimos reviews/comentarios de usuarios
- * Obtiene sus propios datos desde la API
- */
+
 const ComentariosRecientes = () => {
   const [comentarios, setComentarios] = useState([]);
   const [cargando, setCargando] = useState(true);

@@ -2,11 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, Row, Col, Modal, Button } from 'react-bootstrap';
 import axios from 'axios';
 
-/**
- * Componente de Cards de Catálogo de Productos
- * Muestra los productos en formato de tarjetas con opción de ver detalles
- * Obtiene sus propios datos desde la API
- */
+
 const TablaProductos = () => {
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);

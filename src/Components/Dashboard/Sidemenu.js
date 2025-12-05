@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-/**
- * Componente de Menú Lateral para el Dashboard
- * Permite navegar entre las diferentes secciones del panel de administración
- */
+
 function Sidemenu({ seccionActiva, cambiarSeccion, menuMovilAbierto, cerrarMenuMovil }) {
   const [menuAbierto, setMenuAbierto] = useState(true);
 
