@@ -16,7 +16,7 @@ function CatalogoProductos() {
             <hr style={{color:'#8B4513', height: '10%', borderWidth:'2px'}} />
             <Row className="mt-5">
                 
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                     
                     <TarjetasCatalogo 
                         categoria = "torta-cuadrada"
@@ -28,7 +28,7 @@ function CatalogoProductos() {
                 </Col>
 
                 
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                     
                     <TarjetasCatalogo 
                         categoria = "torta-cuadrada"
@@ -40,7 +40,7 @@ function CatalogoProductos() {
                 </Col>
 
                 
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                     <TarjetasCatalogo 
                         categoria = "torta-circular"
                         imagen = "/assets/images/TortaVainilla.png"
@@ -53,7 +53,7 @@ function CatalogoProductos() {
 
             <Row className="mt-5">
                 
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                     <TarjetasCatalogo 
                         categoria = "torta-circular"
                         imagen = "/assets/images/TortaCircularManjar.png"
@@ -64,7 +64,7 @@ function CatalogoProductos() {
                 </Col>
 
                 
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                     <TarjetasCatalogo 
                         categoria = "postre"
                         imagen = "/assets/images/PostreMousseChocolate.png"
@@ -75,7 +75,7 @@ function CatalogoProductos() {
                 </Col>
 
                 
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                     <TarjetasCatalogo 
                         categoria = "postre"
                         imagen = "/assets/images/PostreTiramisu.png"
@@ -87,7 +87,7 @@ function CatalogoProductos() {
             </Row>
 
             <Row className="mt-5">
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                 <TarjetasCatalogo 
                         categoria = "torta-circular"
                         imagen = "/assets/images/TortaNaranja.png"
@@ -99,7 +99,7 @@ function CatalogoProductos() {
                 </Col>
 
                 
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                 <TarjetasCatalogo 
                         categoria = "postre"
                         imagen = "/assets/images/Cheesecake.png"
@@ -111,7 +111,7 @@ function CatalogoProductos() {
                 </Col>
 
                 
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                 <TarjetasCatalogo 
                         categoria = "postre"
                         imagen = "/assets/images/EmpanadaManzana.png"
@@ -125,7 +125,7 @@ function CatalogoProductos() {
 
             <Row className="mt-5">
                 
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                 <TarjetasCatalogo 
                         categoria = "sin-gluten"
                         imagen = "/assets/images/PanSinGluten.png"
@@ -137,7 +137,7 @@ function CatalogoProductos() {
                 </Col>
 
                 
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                 <TarjetasCatalogo 
                         categoria = "torta-circular"
                         imagen = "/assets/images/TartaSantiago.png"
@@ -149,7 +149,7 @@ function CatalogoProductos() {
                 </Col>
 
                 
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                 <TarjetasCatalogo 
                         categoria = "sin-gluten"
                         imagen = "/assets/images/Brownie.png"
@@ -162,7 +162,7 @@ function CatalogoProductos() {
 
             <Row className="mt-5">
                 
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                 <TarjetasCatalogo 
                         categoria = "vegano"
                         imagen = "/assets/images/TortaVeganaChocolate.png"
@@ -173,7 +173,7 @@ function CatalogoProductos() {
                 </Col>
 
                 
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                 <TarjetasCatalogo 
                         categoria = "vegano"
                         imagen = "/assets/images/GalletaAvena.png"
@@ -184,7 +184,7 @@ function CatalogoProductos() {
                 </Col>
 
                 
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                 <TarjetasCatalogo 
                         categoria = "especial"
                         imagen = "/assets/images/TortaCumpleaños.png"
@@ -197,7 +197,7 @@ function CatalogoProductos() {
 
             <Row className="mt-5">
                
-                <Col xl={4} className="d-flex justify-content-center">
+                <Col lg={4} className="d-flex justify-content-center">
                 <TarjetasCatalogo 
                         categoria = "especial"
                         imagen = "/assets/images/TortaBoda.png"
